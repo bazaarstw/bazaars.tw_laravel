@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Search module
+ * --------------------------------------- */
+.mSearch{
+	padding: 20px;
+}
+	.mSearch .title{
+		font-size: 21px;
+		padding: 5px;
+		font-weight: 600;
+		text-align: center;
+	}
+	.mSearch .content{
+		text-align: left;
+	}
+	.mSearch div{
+		padding: 3px;
+		font-size: 18px;
+	}
+	.mSearch select{
+		padding: 3px;
+		font-size: 18px;
+	}
+	.mSearch input{
+		padding: 3px;
+		font-size: 18px;
+	}
+	.mSearch .cols-search li{
+		margin: 5px 0;
+	}

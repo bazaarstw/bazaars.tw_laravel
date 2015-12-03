@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bazaars - Member Management</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../_css/plugcss/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../plugin/sb-admin2/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+	
+    <!-- Custom CSS -->
+    <link href="../plugin/sb-admin2/dist/css/sb-admin-2.css" rel="stylesheet">
+	<link href="_css/chosen.css" rel="stylesheet"/>
+	<!-- <link href="../_css/login.css" rel="stylesheet"/> -->
+
+    <!-- Custom Fonts -->
+    <link href="../plugin/sb-admin2/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../_library/ckeditor/ckeditor.js"></script>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Bazaars 會員管理後台 (Member Management)</a>
+            </div>
+            <!-- /.navbar-header -->
+			<ul class="nav navbar-right top-nav">
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Hi, Member<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+						<li>
+                            <a href="personal.html"><i class="fa fa-info fa-fw"></i> 個人資料編輯</a>
+                        </li>
+                        <li>
+                            <a href="../logout.html"><i class="fa fa-sign-out fa-fw"></i> 登出 Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+			
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="text-center">
+                            <span><h3><strong>選單列表 Menu List</strong></h3></span>
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> 主頁 Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="farmer.html"><i class="fa fa-bar-chart-o fa-fw"></i> 農友 Farmer</a>
+                        </li>
+                        <li>
+                            <a href="store.html"><i class="fa fa-table fa-fw"></i> 店家 Store</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> 即時通<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse in">
+                                <li>
+                                    <a href="news.html">活動報報</a>
+                                </li>
+                                <li>
+                                    <a href="work.html">小農應援團</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+						<li>
+                            <a href="../"><i class="fa fa-eye fa-fw"></i> 前台檢視</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">店家 Store</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="bind_pageActDesc"></span>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form" class="form_saveStore">
+                            <div class="row">
+									<input class="bind_act" type='hidden' name='act' value='store_prcAdd'/>
+									<input class="bind_farmerItem" type='hidden' name='farmerItem' value=''/>
+									<input class="bind_storeTypeItem" type='hidden' name='storeTypeItem' value=''/>
+									<input class="bind_storeId" type='hidden' name='storeId' value=''/>
+									<input class="bind_lat" type='hidden' name='latitude' value=''/>
+									<input class="bind_lon" type='hidden' name='longitude' value=''/>
+									
+									<div class="col-lg-6">
+										<div class="form-group">
+											<label>店家名稱 Name</label>
+											<input class="form-control bind_storeName" name="storeName" placeholder="請輸入店家名稱..." tabindex="1">
+										</div>
+										<div class="form-group">
+											<label>手機 Mobile</label>
+											<span id="phone-field-count" class="hidden">1</span>
+											<div id="field" class="phone-field">
+												<div class="col-lg-11">
+													<input autocomplete="off" class="form-control input bind_phone" id="phone-field1" name="phone[]" type="text" placeholder="請輸入手機號碼..." tabindex="2" value="" />
+												</div>
+												<div class="col-lg-1">
+													<button id="b1" class="btn phone-add-more" type="button">+</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label>電子信箱 E-mail</label>
+											<span id="email-field-count" class="hidden">1</span>
+											<div id="field" class="email-field">
+												<div class="col-lg-11">
+													<input autocomplete="off" class="form-control input bind_email" id="email-field1" name="email[]" type="text" placeholder="email@example.com" tabindex="3" value="" />
+												</div>
+												<div class="col-lg-1">
+													<button id="b1" class="btn email-add-more" type="button">+</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label>說明 Content</label>
+											<textarea class="form-control bind_content" name="content" rows="6" placeholder="請輸入說明內文..." tabindex="5"></textarea>
+										</div>
+										<div class="form-group">
+											<label>店家地址 Address</label>
+											<br/><select name="city" class="bind_city view_citySelectList"></select>
+											<select name="town" class="bind_town view_townSelectList"></select>
+											<br/><input class="form-control bind_address" name="address" placeholder="請輸入地址..." tabindex="5">
+										</div>
+									</div>
+									<div class="form-group">
+										<label>個人網頁 Personal Homepage</label>
+										<span id="link-field-count" class="hidden">1</span>
+										<div id="field" class="link-field">
+											<div class="col-lg-6">
+												<input autocomplete="off" class="form-control input bind_link" id="link-field1" name="link[]" type="text" placeholder="http://www.facebook.com/example" tabindex="5" value="" />
+											</div>
+											<div class="col-lg-5">
+												<input autocomplete="off" class="form-control input bind_linkDesc" id="linkDesc-field1" name="linkDesc[]" type="text" placeholder="請填寫網頁說明..." tabindex="6" value="" />
+											</div>
+											<div class="col-lg-1">
+												<button id="b1" class="btn link-add-more" type="button">+</button>
+											</div>
+										</div>
+									</div>
+									<!-- /.col-lg-6 (nested) -->
+									<div class="col-lg-6">
+										<h1>農友 Farmer</h1>
+										<div class="form-group">
+											<label for="disabledSelect">請選擇農友</label>
+											<select data-placeholder="請選擇農友" class="form-control farmerItem" multiple tabindex="8"></select>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<h1>店家型態 StoreType</h1>
+										<div class="form-group">
+											<label for="disabledSelect">請選擇店家型態</label>
+											<select data-placeholder="請選擇店家型態" class="form-control storeTypeItem" multiple tabindex="9"></select>
+										</div>
+									</div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>詳細內容 Detail</label>
+                                        <textarea name="detail" id="detail" class="bind_detail"></textarea>
+                                    </div>
+                                    <button type="button" class="btn btn-default aj_saveStore" tabindex="9">送出 Submit</button>
+                                    <button type="reset" class="btn btn-default" tabindex="10">清除 Reset</button>
+                                </div>
+                            </div>
+                            <!-- /.row (nested) -->
+                            </form>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- RequireJS -->
+	<script src="../_library/require.min.js" data-main="_js/storedetail" defer async="true"></script>
+	<script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+
+    <script>
+        CKEDITOR.replace('detail',{
+            // filebrowserBrowseUrl: '/browser/browse.php',
+            filebrowserUploadUrl: '/upload.php',
+            height: 500
+        });
+    </script>
+	
+</body>
+
+</html>

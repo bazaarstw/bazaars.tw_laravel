@@ -1,0 +1,21 @@
+{
+  "name": "bazaars.tw",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bazaarstw/bazaars.tw",
+  "authors": [
+    "Bazaars <bazaars.tw@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5"
+  }
+}
