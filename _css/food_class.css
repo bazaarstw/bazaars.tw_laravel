@@ -1,0 +1,44 @@
+@CHARSET "ISO-8859-1";
+
+@import url("_commsubpages.css");
+
+
+#foods-subtype-list .items a{
+	text-align: center;
+	background-color:#FFF;
+	margin: 30px;
+	padding: 15px;
+	display: block;
+	-moz-box-shadow: 5px 6px 5px -2px rgba(20%,20%,20%,0.3);
+    -webkit-box-shadow: 5px 6px 5px -2px rgba(20%,20%,20%,0.3);
+    box-shadow: 5px 6px 5px -2px rgba(20%,20%,20%,0.3);
+	border: 1px solid #CCC;
+}
+#foods-subtype-list .items a:hover{
+	margin: 25px 30px 35px 30px;
+	-moz-box-shadow: 0px 0px 0px 0px rgba(20%,20%,20%,0.3);
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(20%,20%,20%,0.3);
+    box-shadow: 0px 0px 0px 0px rgba(20%,20%,20%,0.3);
+	border: 1px solid #CCC;
+}
+#foods-subtype-list .items a .cover{
+	overflow: hidden;
+	max-height: 180px;
+	
+}
+#foods-subtype-list .items a .cover img{
+	height: 180px;
+	max-width: 300px;
+}
+
+#foods-subtype-list .items a .title{
+	color: #000;
+	font-size: 23px;
+	padding: 20px 0;
+}
+
+.view_parentFoodClassName{
+	padding: 10px;
+	font-size: 18px;
+	color: #06c;
+}
