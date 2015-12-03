@@ -1,0 +1,19 @@
+{
+  "name": "bazaars.tw_laravel",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bazaarstw/bazaars.tw_laravel",
+  "authors": [
+    "yan <a0726h77@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
