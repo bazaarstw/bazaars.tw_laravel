@@ -41,7 +41,7 @@ body{
 
 .view_loging,
 .mSample {
-	display: none;
+	/* display: none; */
  }
 .slider-wrapper{
 	padding: 0 0 20px 0;

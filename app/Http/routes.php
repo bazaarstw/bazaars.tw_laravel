@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::resource('event', 'EventController');
+Route::resource('work', 'WorkController');
