@@ -4,6 +4,9 @@ Homestead.yaml
 Homestead.json
 .env
 
+.env.ko
+fig.yml
+
 # old repo files
 public/LICENSE
 public/README.md
