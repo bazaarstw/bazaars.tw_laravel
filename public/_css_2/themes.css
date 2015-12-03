@@ -67,7 +67,7 @@
 	min-height: 63px;
 }
 .themes .user-block ul{
-	display: none;
+	/* display: none; */
 }
  
 .themes .navbar{
