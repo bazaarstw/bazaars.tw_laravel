@@ -1,0 +1,91 @@
+@CHARSET "ISO-8859-1";
+
+@import url("plugcss/bootstrap.min.css");
+@import url("plugcss/jquery.fullPage.css");
+@import url("plugcss/carousel.css");
+@import url("plugcss/font-awesome.min.css");
+
+
+@import url("_html.css");
+@import url("_comm.css");
+@import url("_m_page.css");
+@import url("_m_datalist.css");
+@import url("_m_search.css");
+@import url("themes.css");
+@import url("font.css");
+
+
+/* Demos Menu
+ * --------------------------------------- */
+body{
+	background: url('../_images/index_cover_gray.jpg') no-repeat top center;
+	display: none;
+}
+#mainFrame{
+	margin: 0 auto;
+	min-height: 900px;
+	
+}
+
+#headerFrame{
+	padding: 30px;
+}
+#centerFrame{
+	margin: 0 auto;
+}
+
+#footerFrame{
+	background:url('../_images/00_comm_bg.png') no-repeat bottom center;
+	min-height: 125px;
+}
+
+.view_loging,
+.mSample {
+	display: none;
+ }
+.slider-wrapper{
+	padding: 0 0 20px 0;
+	text-align: center;
+}
+
+.mDataList .cols-body .item-list{
+	color: #000;
+	padding: 10px 8px;
+	margin: 5px 0;
+	font-size: 15px;
+	border-bottom: 1px solid #000;
+}
+
+
+/* 1920px config
+ * --------------------------------------- */
+@media screen and (min-width: 1248px ){
+	body{
+		background: url('../_images/index_cover_gray_1920.jpg') no-repeat top center;
+	}
+	#mainFrame{
+		min-height: 900px;
+		width: 980px;
+	}
+	
+}
+
+
+/* 1280px config
+ * --------------------------------------- */
+@media screen and(min-width: 768px ){
+	#mainFrame{
+		width: 90%;
+	}
+}
+
+/* mobile < 768px config
+ * --------------------------------------- */
+@media screen and(max-width: 768px){
+	
+	#mainFrame{
+		width: 90%;
+	}
+}
+
+
