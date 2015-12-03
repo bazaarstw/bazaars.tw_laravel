@@ -8,12 +8,14 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Work;
+use App\WorkSign;
 
 class WorkController extends Controller
 {
     public function __construct()
     {
         $this->work = new Work();
+        $this->work_sign = new WorkSign();
     }
 
     /**
@@ -57,7 +59,25 @@ class WorkController extends Controller
      */
     public function show($id)
     {
-        //
+        $work = Work::find($id);
+
+        $isOwner = False;
+        $isSigned = False;
+        if(isset($_SESSION['website_login_session']['memberId']))
+        {
+            if($work->memberId == $_SESSION['website_login_session']['memberId'])
+            {
+                // show attendees in front page
+                $isOwner = True;
+            }
+            else
+            {
+                // show registration or cancle in front page
+                $isSigned = $this->work_sign->isSigned($id, $_SESSION['website_login_session']['memberId']);
+            }
+        }
+
+        return view('work.show', array('work' => $work, 'isOwner' => $isOwner, 'isSigned' => $isSigned));
     }
 
     /**
