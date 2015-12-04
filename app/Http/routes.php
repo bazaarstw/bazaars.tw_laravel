@@ -15,5 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('store', 'StoreController');
 Route::resource('event', 'EventController');
 Route::resource('work', 'WorkController');
