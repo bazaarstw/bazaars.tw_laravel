@@ -3,7 +3,7 @@
 @section('meta')
     <meta property="og:url"           content="{{ "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']  }}" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="{{ $store->title }}" />
+    <meta property="og:title"         content="{{ $store->storeName }}" />
     <meta property="og:description"   content="{{ $store->content }}" />
     <meta property="og:image"         content="http://bazaars.tw/_images/00_logo.png" />
 @endsection
