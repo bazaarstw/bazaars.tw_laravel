@@ -5,7 +5,7 @@
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="{{ $store->storeName }} - 我的菜市場" />
     <meta property="og:description"   content="{{ $store->content }}" />
-    <meta property="og:image"         content="http://bazaars.tw/_images/00_logo.png" />
+    <meta property="og:image"         content="http://bazaars.tw/_images/logo-600-500.png" />
 @endsection
 
 @section('css')

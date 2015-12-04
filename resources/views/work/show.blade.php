@@ -5,7 +5,7 @@
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="{{ $work->title }}" />
     <meta property="og:description"   content="{{ $work->memo }}" />
-    <meta property="og:image"         content="http://bazaars.tw/_images/00_logo.png" />
+    <meta property="og:image"         content="http://bazaars.tw/_images/logo-600-500.png" />
 @endsection
 
 @section('css')
