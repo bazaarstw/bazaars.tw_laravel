@@ -13,6 +13,9 @@
 @endsection
 
 @section('js')
+    <script type="text/javascript">
+        var work_id = {{ $work->workId }};
+    </script>
     <script src="{{ URL::asset('_js_2/workdetail.js') }}"></script>
 @endsection
 
