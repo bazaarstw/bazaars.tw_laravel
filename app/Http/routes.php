@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('farmer', 'FarmerController');
 Route::resource('store', 'StoreController');
 Route::resource('event', 'EventController');
 Route::resource('work', 'WorkController');
