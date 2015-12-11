@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 
 Route::get('farmer/all', 'FarmerController@index_all');
+Route::get('store/all', 'StoreController@index_all');
 
 Route::resource('farmer', 'FarmerController');
 Route::resource('store', 'StoreController');

@@ -20,6 +20,13 @@ class StoreController extends Controller
         //
     }
 
+    public function index_all()
+    {
+        $stores = Store::get();
+
+        return view('store.index_all', array('stores' => $stores));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
