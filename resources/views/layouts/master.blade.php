@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>我的菜市場 Bazaars</title>
+    <title>@yield('title')我的菜市場 Bazaars</title>
     <meta name="keywords" content="我的菜市場, bazaars, 宜蘭"/>
     <meta name="description" content="Bazaars" />
     <meta charset="utf-8">

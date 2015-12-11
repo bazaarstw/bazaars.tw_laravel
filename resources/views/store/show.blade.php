@@ -1,5 +1,9 @@
 @extends('layouts.front')
 
+@section('title')
+{{ $store->storeName }} -
+@endsection
+
 @section('meta')
     <meta property="og:url"           content="{{ "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']  }}" />
     <meta property="og:type"          content="website" />
