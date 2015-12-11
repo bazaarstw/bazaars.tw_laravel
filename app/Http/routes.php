@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('farmer/all', 'FarmerController@index_all');
+
 Route::resource('farmer', 'FarmerController');
 Route::resource('store', 'StoreController');
 Route::resource('event', 'EventController');

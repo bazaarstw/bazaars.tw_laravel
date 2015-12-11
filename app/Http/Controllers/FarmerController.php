@@ -21,6 +21,13 @@ class FarmerController extends Controller
         //
     }
 
+    public function index_all()
+    {
+        $farmers = Farmer::get();
+
+        return view('farmer.index_all', array('farmers' => $farmers));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
