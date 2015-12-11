@@ -31,7 +31,7 @@
 
         <hr>
 
-        <div class="addrs"><p class="subtitle">聯絡地址</p>{{ $store->city_name->cityName }}{{ $store->town_name->townName }}{{ $store->address }}</div>
+        <div class="addrs"><p class="subtitle">聯絡地址</p>{{{ isset($store->city_name) ? $store->city_name->cityName : '' }}}{{{ isset($store->town_name) ? $store->town_name->townName : '' }}}{{ $store->address }}</div>
         <div class="phone"><p class="subtitle">聯絡電話</p>
             <ul>
                 @foreach ($store->meta as $meta)
