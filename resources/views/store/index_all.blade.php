@@ -11,6 +11,7 @@
         <h3 class="cols-title hidden-xs">
             <ul class="item-list row">
                 <li class="items col-md-3"><span>商店名稱</span></li>
+                <li class="items col-md-3"><span>所在縣市</span></li>
             </ul>
         </h3>
 
@@ -19,6 +20,7 @@
             <a href="{{ URL::route('store.show', $store->storeId) }}" class="mSample">
                 <ul class="item-list row">
                     <li class="items col-md-3"><span>{{ $store->storeName }}</span></li>
+                    <li class="items col-md-3"><span>{{ $store->city_name ? $store->city_name->cityName : '' }}</span></li>
                 </ul>
             </a>
             @endforeach
