@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 @section('title')
-{{ $farmer->name }} -
+{{ $farmer->name }} - 
 @endsection
 
 @section('meta')

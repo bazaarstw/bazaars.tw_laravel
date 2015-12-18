@@ -1,5 +1,9 @@
 @extends('layouts.front')
 
+@section('title')
+店家列表 - 
+@endsection
+
 @section('css')
 	<link rel="stylesheet" href="{{ URL::asset('_css_2/store_search.css') }}" />
 @endsection

@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 @section('title')
-{{ $store->storeName }} -
+{{ $store->storeName }} - 
 @endsection
 
 @section('meta')

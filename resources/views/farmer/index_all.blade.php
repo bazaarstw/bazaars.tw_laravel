@@ -1,5 +1,9 @@
 @extends('layouts.front')
 
+@section('title')
+農友列表 - 
+@endsection
+
 @section('css')
 	<link rel="stylesheet" href="{{ URL::asset('_css_2/food_class_farmers.css') }}" />
 @endsection
