@@ -4,7 +4,7 @@
     <meta property="og:url"           content="{{ "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']  }}" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="{{ $work->title }}" />
-    <meta property="og:description"   content="{{ $work->memo }}" />
+    <meta property="og:description"   content="{{ str_replace('<br />', '', $work->memo) }}" />
     <meta property="og:image"         content="http://bazaars.tw/_images/logo-600-500.png" />
 @endsection
 
