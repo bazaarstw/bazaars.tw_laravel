@@ -30,7 +30,7 @@
         <h1 class="name">{{ $farmer->name }}</h1>
 
         <div class="atricle">
-            <p>{{ $farmer->content }}</p>
+            <p>{!! $farmer->content !!}</p>
         </div>
 
         <hr>
