@@ -29,6 +29,8 @@
         <div class="cover"><img src="{{ ($store->storeImg) ? URL::asset($store->storeImg) : URL::asset('_files/stores/logo_00.jpg') }}" width="100" /></div>
         <h1 class="name">{{ $store->storeName }}</h1>
 
+        <hr>
+
         <div class="atricle">
             <p>{!! $store->content !!}<p>
         </div>
