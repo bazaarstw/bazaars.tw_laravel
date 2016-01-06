@@ -21,7 +21,7 @@
         <div class="cols-body">
             <ul class="rows">
                 <li class="title col-md-3"><h2>活動時間</h2></li>
-                <li class="content col-md-9"><p>{{ $event->startDT }} ~ {{ $event->endDT }}</p></li>
+                <li class="content col-md-9"><p><?php echo e(\Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $event->startDT)->format('Y-m-d H:i')); ?> ~ <?php echo e(\Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $event->endDT)->format('Y-m-d H:i')); ?></p></li>
                 <li class="hr col-md-12">&nbsp;</li>
                 <li class="title col-md-3 clearfix"><h2>活動地點</h2></li>
                 <li class="content col-md-9"><p>{{ $event->city_name->cityName }}{{ $event->town_name->townName }}{{ $event->address }}</p></li>
