@@ -20,13 +20,13 @@
         </div>
         <div class="cols-body">
             <ul class="rows">
-                <li class="title col-md-3"><h2>有效期間</h2></li>
+                <li class="title col-md-3"><h2>活動時間</h2></li>
                 <li class="content col-md-9"><p>{{ $event->startDT }} ~ {{ $event->endDT }}</p></li>
                 <li class="hr col-md-12">&nbsp;</li>
-                <li class="title col-md-3 clearfix"><h2>地　　點</h2></li>
+                <li class="title col-md-3 clearfix"><h2>活動地點</h2></li>
                 <li class="content col-md-9"><p>{{ $event->city_name->cityName }}{{ $event->town_name->townName }}{{ $event->address }}</p></li>
                 <li class="hr col-md-12">&nbsp;</li>
-                <li class="title col-md-3 clearfix"><h2>其他備註</h2></li>
+                <li class="title col-md-3 clearfix"><h2>活動內容</h2></li>
                 <li class="content col-md-9"><p>{!! $event->content !!}</p></li>
                 <li class="hr col-md-12">&nbsp;</li>
                 <li class="clearfix"></li>
